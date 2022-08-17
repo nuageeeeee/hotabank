@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'page/loginpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,10 @@ class MyApp extends StatelessWidget {
                 // alignment: const Alignment(-90, 0),
                 onPressed: () {
                   // ignore: avoid_print
-                  print('test');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const loginPage()),
+                  );
                 },
                 tooltip: 'account',
               );
