@@ -12,12 +12,12 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Welcome to Flutter',
+      title: 'Account',
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: const Text(
-            'Welcome to Flutter',
+            'Account',
             style: TextStyle(color: Colors.black),
           ),
           actions: [
@@ -26,7 +26,7 @@ class AccountPage extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const MyApp()));
               },
-              icon: const Icon(Icons.abc),
+              icon: const Icon(Icons.arrow_back_ios),
               color: Colors.black,
             )
           ],
