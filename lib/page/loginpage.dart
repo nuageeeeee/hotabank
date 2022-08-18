@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotabank/main.dart';
+import 'account.dart';
 
 void main() {
   runApp(const loginPage());
@@ -70,7 +71,13 @@ class loginPage extends StatelessWidget {
                 children: [
                   const SizedBox(height: 26),
                   FloatingActionButton.extended(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AccountPage()),
+                        );
+                      },
                       icon: const Icon(Icons.check),
                       label: const Text("test"))
                 ],
