@@ -34,22 +34,47 @@ class loginPage extends StatelessWidget {
           ),
           body: Column(
             children: [
-              TextFormField(
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.person),
-                  labelText: 'Mail *',
-                  hintText: 'Mail you used to create account',
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 50,
+                  top: 8,
+                  right: 50,
+                  bottom: 8,
                 ),
-                onSaved: (String? value) {},
-                // ignore: body_might_complete_normally_nullable
-                validator: (String? value) {},
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.person),
+                    labelText: 'Mail *',
+                    hintText: 'Mail you used to create account',
+                  ),
+                  onSaved: (String? value) {},
+                  // ignore: body_might_complete_normally_nullable
+                  validator: (String? value) {},
+                ),
               ),
-              TextFormField(
-                decoration: const InputDecoration(
-                    icon: Icon(Icons.password),
-                    labelText: 'Password *',
-                    hintText: 'Password you used to create account'),
-              )
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 50,
+                  top: 8,
+                  right: 50,
+                  bottom: 8,
+                ),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                      icon: Icon(Icons.password),
+                      labelText: 'Password *',
+                      hintText: 'Password you used to create account'),
+                ),
+              ),
+              Column(
+                children: [
+                  const SizedBox(height: 26),
+                  FloatingActionButton.extended(
+                      onPressed: () {},
+                      icon: const Icon(Icons.check),
+                      label: const Text("test"))
+                ],
+              ),
             ],
           )),
     );
