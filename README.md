@@ -11,4 +11,4 @@ I made a to do list for things a want to add in the app
 - [ ] Register page
 - [ ] Account page
 - [ ] Login/register system
-- [ ] Firebase integration 
+- [x] Firebase integration 
