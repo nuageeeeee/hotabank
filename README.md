@@ -7,7 +7,7 @@ I made a to do list for things a want to add in the app
 **To do**
 
 - [x] Main page
-- [ ] Login page
+- [x] Login page
 - [ ] Register page
 - [ ] Account page
 - [ ] Login/register system
