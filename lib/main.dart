@@ -40,9 +40,28 @@ class MyApp extends StatelessWidget {
             },
           ),
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+        body: Column(children: const [
+          Padding(
+            padding: EdgeInsets.only(
+              left: 10,
+              top: 220,
+              right: 0,
+              bottom: 0,
+            ),
+            child: CircularProgressIndicator(),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 10,
+              top: 10,
+              right: 0,
+              bottom: 0,
+            ),
+            child: Text(
+                'The main page is under construction, but you can create a account!',
+                style: TextStyle(fontSize: 20)),
+          )
+        ]),
       ),
     );
   }
