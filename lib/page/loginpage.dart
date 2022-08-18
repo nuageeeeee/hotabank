@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotabank/main.dart';
 import 'account.dart';
+import 'registerpage.dart';
 
 void main() {
   runApp(const loginPage());
@@ -28,7 +29,7 @@ class loginPage extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const MyApp()));
                 },
-                icon: const Icon(Icons.abc),
+                icon: const Icon(Icons.arrow_back_ios),
                 color: Colors.black,
               )
             ],
@@ -82,6 +83,30 @@ class loginPage extends StatelessWidget {
                       label: const Text("test"))
                 ],
               ),
+              const Padding(
+                padding: EdgeInsets.only(
+                  left: 0,
+                  top: 15,
+                  right: 0,
+                  bottom: 0,
+                ),
+                child: Text(
+                  'If you dont have account',
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RegisterPage()),
+                    );
+                  },
+                  child: const Text(
+                    'register',
+                    style: TextStyle(fontSize: 15),
+                  ))
             ],
           )),
     );
