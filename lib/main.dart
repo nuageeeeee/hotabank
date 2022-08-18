@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           centerTitle: true,
           title: const Text(
-            'tess',
+            'Home',
             style: TextStyle(color: Colors.black),
           ),
           leading: Builder(
@@ -40,28 +40,31 @@ class MyApp extends StatelessWidget {
             },
           ),
         ),
-        body: Column(children: const [
-          Padding(
-            padding: EdgeInsets.only(
-              left: 10,
-              top: 220,
-              right: 0,
-              bottom: 0,
+        body: Column(
+          children: const [
+            Padding(
+              padding: EdgeInsets.only(
+                left: 10,
+                top: 220,
+                right: 0,
+                bottom: 0,
+              ),
+              child: CircularProgressIndicator(),
             ),
-            child: CircularProgressIndicator(),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 10,
-              top: 10,
-              right: 0,
-              bottom: 0,
-            ),
-            child: Text(
+            Padding(
+              padding: EdgeInsets.only(
+                left: 10,
+                top: 10,
+                right: 0,
+                bottom: 0,
+              ),
+              child: Text(
                 'The main page is under construction, but you can create a account!',
-                style: TextStyle(fontSize: 20)),
-          )
-        ]),
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
