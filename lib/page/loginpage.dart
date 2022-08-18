@@ -33,10 +33,22 @@ class loginPage extends StatelessWidget {
             ],
           ),
           body: Column(
-            children: const [
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'test'),
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(
+                  icon: Icon(Icons.person),
+                  labelText: 'Mail *',
+                  hintText: 'Mail you used to create account',
+                ),
+                onSaved: (String? value) {},
+                // ignore: body_might_complete_normally_nullable
+                validator: (String? value) {},
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                    icon: Icon(Icons.password),
+                    labelText: 'Password *',
+                    hintText: 'Password you used to create account'),
               )
             ],
           )),
