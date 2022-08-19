@@ -29,6 +29,13 @@
             {
               "client_id": "989385273549-hm5d1in491j8iein6o5tdq1dvb6pdrpf.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "989385273549-4ok1qnn76rjuk4oespfc9vd34p7vifvg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hotabank"
+              }
             }
           ]
         }
