@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hotabank/page/loginpage.dart';
 import '../main.dart';
+import 'account.dart';
 
 void main() {
   runApp(const RegisterPage());
@@ -73,6 +75,14 @@ class RegisterPage extends StatelessWidget {
                   bottom: 8,
                 ),
                 child: TextFormField(
+                  onSaved: (String? value) {
+                    debugPrint('Value for field saved as "$value" ');
+                  },
+                  validator: (String? value) {
+                    return (value != null && value.contains('@'))
+                        ? 'Do not use the @ char.'
+                        : null;
+                  },
                   decoration: const InputDecoration(
                     icon: Icon(Icons.password),
                     labelText: 'Re-enter password *',
@@ -87,7 +97,7 @@ class RegisterPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MyApp()),
+                              builder: (context) => const AccountPage()),
                         );
                       },
                       icon: const Icon(Icons.check),
@@ -102,7 +112,7 @@ class RegisterPage extends StatelessWidget {
                   bottom: 0,
                 ),
                 child: Text(
-                  'If you dont have account',
+                  'If you have an account',
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
               ),
@@ -111,11 +121,11 @@ class RegisterPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RegisterPage()),
+                          builder: (context) => const loginPage()),
                     );
                   },
                   child: const Text(
-                    'register',
+                    'Login',
                     style: TextStyle(fontSize: 15),
                   ))
             ],
